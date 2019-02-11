@@ -95,25 +95,28 @@ nav
     span
       display: inline-block
       border-radius: 15px
-      background: none
+      background: #5abbaa
       padding: 12px 10px 11px
-      margin: 15px 10px 10px
-      color: #5abbaa
+      margin: 25px 10px 10px
+      color: #fff
+      letter-spacing: .4px
       text-transform: uppercase
       font-family: 'Exo 2'
       border: 1px solid #5abbaa
     a
       position: relative
       display: block
-      padding: 20px 15px 17px 60px
+      padding: 22px 15px 20px 58px
       text-decoration: none
+      font-weight: bold
+      font-size: 16px
       color: #535353 !important
       border-bottom: 1px solid #efefef
       &:hover, &.active
         color: #5abbaa !important
       &:before
         font: normal 22px fontawesome
-        top: 17px
+        top: 20px
         left: 18px
     li
       &:nth-child(2) a:before
@@ -143,22 +146,22 @@ nav
 
 main
   flex: 1
-  padding: 25px
+  padding: 0
+  border-radius: 0 20px 0 0
   background: #fff
   #org_info
     background: #f5f5f5
     box-shadow: 0 4px 8px rgba(0,0,0,0.1)
-    border-radius: 20px
-    display: inline-block
+    border-radius: 0 20px 0 0
+    display: flex
     font-family: 'Exo 2', sans-serif
-    width: 105%
+    width: 100%
     height: auto
-    margin: -25px -25px 25px -25px
-    padding: 40px 50px
+    padding: 30px 50px 30px
     .org_logo
-      width: 27%
-      float: left
-      margin: 0 10px 0 0
+      flex-basis: 27%
+      min-width: 230px
+      margin: 10px 10px 0 0
       img
         width: 100%
         position: relative
@@ -167,8 +170,7 @@ main
         border-radius: 20px
         border: 10px solid #efefef
     .org_description
-      width: 70%
-      float: left
+      width: auto
       h1
         margin: 20px 0 15px 20px
         color: #5abbaa
@@ -180,7 +182,7 @@ main
       p
         color: #000
         font-size: 1.3em
-        line-height: 1.5em
+        line-height: 1.7em
         margin: 0px 20px
         width: 100%
       .site
@@ -200,67 +202,66 @@ main
 .section
   border: 1px solid #efefef
   background: #fafafa
-  padding: 20px
+  padding: 0px
   border-radius: 20px
-  margin: 20px 0
+  margin: 20px 30px
   h2
     border-bottom: 1px solid #efefef
     margin: 0 0 20px 0
     font-family: 'Exo 2'
     color: rgba(0,0,0,0.7)
     text-align: left
-    font-size: 32px
-    font-weight: 200
-    padding: 9px 0 25px 72px
+    font-size: 27px
+    font-weight: 400
+    padding: 19px 0 19px 70px
+    background: rgba(0,0,0,0.03)
     position: relative
+    border-radius: 20px 20px 0 0
     &:before
       font: normal 27px fontawesome
-      box-shadow: 0 2px 1px rgba(255, 255, 255, 0.3)
-      top: 0px
+      top: 22px
       color: rgba(0,0,0,0.3)
       width: 57px
       height: 55px
-      background: rgba(0,0,0,0.05)
-      left: 0px
-      padding: 15px 15px 10px 15px
-      border-radius: 15px
+      left: 30px
+      position: absolute
   &.overview
     h2
-      color: #89bcba
+      color: #5abbaa
       &:before
         content: '\f00a'
-        color: #89bcba
-        padding: 15.5px 15px 10px 15px
+        color: #5abbaa
   &.services
     h2
       color: #fd894c
       &:before
         content: '\f012'
+        left: 29px
+        top: 20px
         color: #fd894c
   &.finances
     h2
       color: #7cb596
       &:before
         content: '\f201'
+        left: 27px
         color: #7cb596
-        padding: 15px 15px 10px 13px
   &.team
     h2
       color: #84a9f5
       &:before
         content: '\f0c0'
+        left: 27px
         color: #84a9f5
-        padding: 15px 15px 10px 13px
         font: normal 28px fontawesome
   &.contact
-    h2:before
-      content: '\f1fa'
-      color: rgba(0,0,0,0.7)
-      padding: 15px 15px 10px 17px
+    h2
+      padding-left: 20px
 
 
 .flex-grid
   display: flex
+  padding: 0 20px 20px
   > div
     flex: 1
     &:last-child
@@ -281,9 +282,18 @@ main
  ***********************************************************
 @media (max-width: 1000px)
   .flex-grid
-    flex-direction: column
+    display: inline-block
+    width: 100%
     > div
-      margin-right: 0
+      margin: 0px 0 20px 0 !important
+      width: 100%
+  #smart-aid #score
+    font-size: 3.8em !important
+  #smart-aid svg
+    width: 13% !important
+    margin: 10% 0 0 35% !important
+  .card-body h3
+    font-size: 1.5em !important
 
 
 
@@ -317,9 +327,11 @@ main
     position: absolute
     width: 100%
     left: 0
-    padding: 16px 0 15px
+    padding: 10px 0 9px
+    padding-right: 30px !important
+    line-height: 1.3em
     top: 0
-    border-radius: 20px 20px 0 0
+    border-radius: 10px 10px 0 0
     margin: 0 !important
     background: rgba(0, 0, 0, 0.17) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1' viewBox='0 0 100 125'%3E%3Cpath fill='rgba(255, 255, 255, 0.9)' d='M17 17a47 47 0 1 0 67 67 47 47 0 0 0-67-67zm35 6c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm10 48l-1 2c-2 3-6 4-9 4h-6c-3 0-6-4-6-8l1-7 3-14v-1c0-2-1-3-3-3h-2l-1-2 1-1 2-1h14c2 0 3 1 3 3l-1 4-3 16-1 5 1 2 2 2 2-1 2-1c2 0 3 0 2 1z'/%3E%3C/svg%3E") no-repeat
     background-size: 20px
@@ -368,7 +380,7 @@ main
     transition: all 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     z-index: 2
     transform: rotateY(0)
-    border-radius: 20px !important
+    border-radius: 10px !important
     position: relative
     &:hover
       cursor: pointer
@@ -384,7 +396,7 @@ main
     padding-top: 0%
     height: auto
     width: 100%
-    border-radius: 20px
+    border-radius: 10px
     position: relative
     text-align: center !important
     display: flex
@@ -423,7 +435,7 @@ main
   height: 50px
   position: absolute
   bottom: 0px
-  border-radius: 0 0 20px 20px
+  border-radius: 0 0 10px 10px
   p
     float: left
     display: inline
@@ -433,19 +445,32 @@ main
   #expenses-admin
     width: 50%
     background: #7cb596
-    border-radius: 0 0 0px 20px
+    border-radius: 0 0 0px 10px
   #expenses-direct
     width: 50%
     background: #d9aa75
-    border-radius: 0 0 20px 0
+    border-radius: 0 0 10px 0
   #annual-revenue
     width: 50%
     background: #7cb596
-    border-radius: 0px 0px 0px 20px
+    border-radius: 0px 0px 0px 10px
   #annual-expenses
     width: 50%
     background: #d9aa75
-    border-radius: 0 0 20px 0px
+    border-radius: 0 0 10px 0px
+  #local
+    width: 33.3%
+    background: #8fcb9f
+    border-radius: 0 0 0 10px
+  #international
+    width: 33.3%
+    background: #93a9ff
+  #refugee
+    width: 33.3%
+    background: #d9aa75
+    border-radius: 0 0 10px 0px
+  
+  
 
 #score
   color: white
@@ -466,7 +491,7 @@ main
     font-size: 6.4vw
     margin-left: 20px
   .front
-    background: url("../images/bright-squares.png") #89bcba !important
+    background: url("../images/bright-squares.png") #5abbaa !important
   .back .card-body
     background: #6f9191
   svg
@@ -511,6 +536,7 @@ main
     background: #6e8dcd
   h3
     font-size: 1.8vw
+    padding-bottom: 13px
 
 #volunteers_total
   .card-body
@@ -521,14 +547,22 @@ main
   h3
     font-size: 1.8vw
 
+.team_distribution
+  flex-basis: 75% !important
+  margin-left: 20px
+
 #team_distribution
   h3
-    background: #84a9f5
+    background: #6e8dcb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1' viewBox='0 0 100 125'%3E%3Cpath fill='rgba(255, 255, 255, 0.9)' d='M17 17a47 47 0 1 0 67 67 47 47 0 0 0-67-67zm35 6c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm10 48l-1 2c-2 3-6 4-9 4h-6c-3 0-6-4-6-8l1-7 3-14v-1c0-2-1-3-3-3h-2l-1-2 1-1 2-1h14c2 0 3 1 3 3l-1 4-3 16-1 5 1 2 2 2 2-1 2-1c2 0 3 0 2 1z'/%3E%3C/svg%3E") no-repeat
+    background-size: 20px
+    background-position: 96% 62%
   .front .card-body
     background: #fff
   .back .card-body
     height: 100% !important
     background: #6e8dcd
+  .chart-wrapper
+    margin-bottom: 60px
 
 .services
   h2
@@ -555,11 +589,171 @@ main
 
 .contact
   display: inline-block
-  width: 100%
+  width: 95%
   .contact-card
-    width: 31%
+    width: 28%
+    margin: 0 0 20px 3%
     float: left
     display: inline-block
     height: auto
-    margin: 5px 0 0 10px
     line-height: 25px
+
+@media (max-width: 1120px)
+  .card-body h3
+    font-size: 1.75vw
+    text-align: left
+    padding-left: 20px
+
+  .section
+    margin: 20px
+
+  #smart-aid svg
+    width: 33%
+    margin: 27% 0 0 20px
+
+  .overview
+    .card-body
+      height: 150px
+
+  #smart-aid #score
+    padding: 36px 20px 0 0
+    margin-left: 10px
+    font-size: 5vw !important
+  
+  #daily-visits #score, #cumulative-visits #score
+    font-size: 5vw !important
+    padding: 36px 0 0 0
+
+  .services 
+    #score 
+      margin: 0px auto !important
+      padding: 40px 0 0 0
+    .card-body
+      height: 150px !important
+
+  #volunteers_stay h3 
+    font-size: 1.7vw
+
+@media (max-width: 650px)
+  nav
+    width: 60px
+    overflow: hidden
+    min-width: 60px
+    border-right: 1px solid #a9a9a9
+    .menu
+      width: 60px
+      min-width: 60px
+      overflow: hidden
+      padding: 0
+      .org_title
+        display: none
+      li a
+        padding-left: 100px
+    header
+      padding: 0
+      h1
+        width: 90px
+        padding: 15px 0 35px 80px
+        background-position: 12px 20px
+        overflow: hidden
+  main 
+    #org_info
+      padding: 20px 0 
+      display: inline-block
+      .org_logo
+        width: 100%
+        flex-basis: 100%
+        text-align: center
+        margin: 0 auto 10px
+        img 
+          width: 60%
+          margin: 0
+      .org_description
+        width: 90%
+        margin: 10px auto
+        float: none
+        display: block
+        .org_title
+          margin: 10px
+          font-size: 10.5vw
+          padding-bottom: 15px
+        .description
+          margin: 0 10px
+        .site
+          margin: 20px 10px 0
+    .section
+      background: none
+      border: none
+      width: 100%
+      margin: 0px auto 0 !important
+      h2
+        color: white !important
+        width: 93%
+        margin: 20px auto 20px
+        border-radius: 10px
+        padding-left: 60px
+        &:before
+          color: white !important
+          left: 20px
+      .card
+        width: 90%
+        margin: 0 auto 20px !important
+        .chart-wrapper
+          width: 100%
+      .flex-grid
+        padding: 0
+        width: 100%
+        display: inline-block
+        text-align: center
+      .card-body 
+        #score
+          font-size: 3.8em !important
+        h3 
+          font-size: 1.6em
+    .overview
+      margin: 10px auto 0 !important
+      h2
+        background: #5abbaa
+      .card-body
+        height: 200px !important
+      #daily-visits #score, #cumulative-visits #score
+        font-size: 3.8em !important
+      #smart-aid #score
+        font-size: 3.8em !important
+      #smart-aid svg
+        width: 27%
+        margin: 20% 0 0 55px
+    .services
+      h2
+        background: #fd894c
+        &:before
+          left: 20px !important
+      .card-body
+        height: 200px !important
+    .finances
+      h2
+        background: #7cb596
+        padding-left: 65px
+        &:before
+          left: 20px !important
+    .team
+      h2
+        background: #84a9f5
+        padding-left: 65px
+        &:before
+          left: 20px !important
+      h3
+        font-size: 1.3em !important
+      .card-body #score
+        font-size: 3em !important
+      .team_distribution
+        margin-left: 0px
+      #volunteers_total h3, #volunteers_stay h3
+        font-size: 1.6em
+    .contact
+      h2
+        background: rgba(0,0,0,0.6)
+      .contact-card
+        width: 100%
+        margin: 0px 0 20px 30px
+
